@@ -9,7 +9,7 @@ Wire protocol: "len(payload) msgpack({'head': SOMEHEADER, 'body': SOMEBODY})"
 # Import Python Libs
 from __future__ import absolute_import
 import logging
-import msgpack
+import msgpack_pure as msgpack
 import socket
 import sys
 import os

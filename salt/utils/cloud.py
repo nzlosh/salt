@@ -18,7 +18,7 @@ import subprocess
 import multiprocessing
 import logging
 import pipes
-import msgpack
+import msgpack_pure as msgpack
 import traceback
 import copy
 import re

@@ -230,6 +230,7 @@ def cpustats():
     get_version = {
         'Linux': linux_cpustats,
         'FreeBSD': freebsd_cpustats,
+        'Isilon OneFS': freebsd_cpustats,
     }
 
     errmsg = 'This method is unsupported on the current operating system!'
@@ -289,6 +290,7 @@ def meminfo():
     get_version = {
         'Linux': linux_meminfo,
         'FreeBSD': freebsd_meminfo,
+        'Isilon OneFS': freebsd_meminfo,
     }
 
     errmsg = 'This method is unsupported on the current operating system!'
@@ -343,6 +345,7 @@ def cpuinfo():
     get_version = {
         'Linux': linux_cpuinfo,
         'FreeBSD': freebsd_cpuinfo,
+        'Isilon OneFS': freebsd_cpuinfo,
     }
 
     errmsg = 'This method is unsupported on the current operating system!'
@@ -406,6 +409,7 @@ def diskstats():
     get_version = {
         'Linux': linux_diskstats,
         'FreeBSD': freebsd_diskstats,
+        'Isilon OneFS': freebsd_diskstats,
     }
 
     errmsg = 'This method is unsupported on the current operating system!'
@@ -520,6 +524,7 @@ def vmstats():
     get_version = {
         'Linux': linux_vmstats,
         'FreeBSD': freebsd_vmstats,
+        'Isilon OneFS': freebsd_vmstats,
     }
 
     errmsg = 'This method is unsupported on the current operating system!'
@@ -601,6 +606,7 @@ def netstats():
     get_version = {
         'Linux': linux_netstats,
         'FreeBSD': freebsd_netstats,
+        'Isilon OneFS': freebsd_netstats,
     }
 
     errmsg = 'This method is unsupported on the current operating system!'
@@ -673,6 +679,7 @@ def netdev():
     get_version = {
         'Linux': linux_netdev,
         'FreeBSD': freebsd_netdev,
+        'Isilon OneFS': freebsd_netdev,
     }
 
     errmsg = 'This method is unsupported on the current operating system!'
@@ -782,6 +789,7 @@ def version():
     get_version = {
         'Linux': linux_version,
         'FreeBSD': lambda: __salt__['cmd.run']('sysctl -n kern.version'),
+        'Isilon OneFS': lambda: __salt__['cmd.run']('sysctl -n kern.version'),
     }
 
     errmsg = 'This method is unsupported on the current operating system!'

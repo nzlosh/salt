@@ -4,7 +4,7 @@ Helper functions for transport components to handle message framing
 '''
 # Import python libs
 from __future__ import absolute_import
-import msgpack
+import msgpack_pure as msgpack
 
 
 def frame_msg(body, header=None, raw_body=False):

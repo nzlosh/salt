@@ -88,6 +88,7 @@ sys.path.insert(
         'py{0[0]}'.format(sys.version_info)
     )
 )
+sys.path.insert(0,"{0}{1}".format(os.path.dirname(sys.argv[0]), "/py2/salt/ext" ))
 
 from salt.scripts import salt_call
 if __name__ == '__main__':
@@ -501,6 +502,11 @@ def gen_min(cachedir, extra_mods='', overwrite=False, so_mods='',
         'salt/ext',
         'salt/ext/__init__.py',
         'salt/ext/six.py',
+        'salt/ext/ordereddict.py',
+        'salt/ext/msgpack_pure',
+        'salt/ext/msgpack_pure/__init__.py',
+        'salt/ext/msgpack_pure/__version__.py',
+        'salt/ext/msgpack_pure/_core.py',
         'salt/ext/ipaddress.py',
         'salt/version.py',
         'salt/syspaths.py',

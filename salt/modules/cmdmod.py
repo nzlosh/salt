@@ -341,7 +341,7 @@ def _run(cmd,
             if __grains__['os'] in ['MacOS', 'Darwin']:
                 env_cmd = ('sudo', '-i', '-u', runas, '--',
                            sys.executable)
-            elif __grains__['os'] in ['FreeBSD']:
+            elif __grains__['os'] in ['FreeBSD', 'Isilon OneFS']:
                 env_cmd = ('su', '-', runas, '-c',
                            "{0} -c {1}".format(shell, sys.executable))
             elif __grains__['os_family'] in ['Solaris']:

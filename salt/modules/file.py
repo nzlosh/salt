@@ -2304,7 +2304,7 @@ def patch(originalfile, patchfile, options='', dry_run=False):
     cmd = [patchpath]
     cmd.extend(salt.utils.shlex_split(options))
     if dry_run:
-        if __grains__['kernel'] in ('FreeBSD', 'OpenBSD'):
+        if __grains__['kernel'] in ('FreeBSD', 'OpenBSD', 'Isilon OneFS'):
             cmd.append('-C')
         else:
             cmd.append('--dry-run')

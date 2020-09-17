@@ -7,7 +7,7 @@ IPC transport classes
 from __future__ import absolute_import
 import logging
 import socket
-import msgpack
+import msgpack_pure as msgpack
 import weakref
 import time
 
